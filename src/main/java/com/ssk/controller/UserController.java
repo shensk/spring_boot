@@ -40,6 +40,7 @@ public class UserController {
         return ResponseResult.success(userDao.save(user));
     }
 
+    //获取年龄信息
     @RequestMapping(value = "ageInfo/{id}",method = RequestMethod.GET)
     public void ageInfo(@PathVariable("id") Integer id) throws UserException{
         userService.getAgeInfo(id);
